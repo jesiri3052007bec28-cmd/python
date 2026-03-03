@@ -1,0 +1,9 @@
+from collections import Counter
+n = int(input())
+words = []
+for _ in range(n):
+    words.append(input().strip())
+counts = Counter(words)
+ordered_distinct_words = list(dict.fromkeys(words))
+print(len(ordered_distinct_words))
+print(*(counts[word] for word in ordered_distinct_words))
