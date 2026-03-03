@@ -1,0 +1,15 @@
+from collections import OrderedDict
+ordered_dictionary = OrderedDict()
+n = int(input())
+
+for _ in range(n):
+    line = input().split()
+    price = int(line[-1])
+    item_name = " ".join(line[:-1])
+    if item_name in ordered_dictionary:
+        ordered_dictionary[item_name] += price
+    else:
+        ordered_dictionary[item_name] = price
+for item_name, net_price in ordered_dictionary.items():
+    print(f"{item_name} {net_price}")
+
