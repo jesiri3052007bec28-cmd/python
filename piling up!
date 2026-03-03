@@ -1,0 +1,32 @@
+from collections import deque
+
+def solve():
+
+    t = int(input())
+    
+    for _ in range(t):
+        
+        n = int(input())
+        queue = deque(map(int, input().split()))
+        
+        top_cube = float('inf')
+        possible = True
+        
+        while queue:
+            if queue[0] >= queue[-1]:
+                current_cube = queue.popleft()
+            else:
+                current_cube = queue.pop()
+            
+            if current_cube <= top_cube:
+                top_cube = current_cube
+            else:
+                possible = False
+                break
+        
+        if possible:
+            print("Yes")
+        else:
+            print("No")
+
+solve()
