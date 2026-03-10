@@ -1,0 +1,30 @@
+import sys
+def integer_division(a_str, b_str):
+    try:
+        a = int(a_str)
+        b = int(b_str)
+        result = a // b
+        print(result)
+    except ValueError as e:
+        print(f"Error Code: {e}")
+    except ZeroDivisionError as e:
+        print(f"Error Code: {e}")
+
+def main():
+    try:
+        T = int(input())
+        for _ in range(T):
+            line = input().split()
+            if len(line) == 2:
+                a_str, b_str = line
+                integer_division(a_str, b_str)
+            else:
+                print("Error Code: Invalid input format")
+    except ValueError as e:
+        print(f"Error Code: {e}")
+    except EOFError:
+        pass
+
+if __name__ == "__main__":
+    main()
+
