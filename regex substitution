@@ -1,0 +1,9 @@
+import re
+def substitute_symbols(text):
+    step1 = re.sub(r"(?<= )&&(?= )", "and", text)
+    step2 = re.sub(r"(?<= )\|\|(?= )", "or", step1)
+    return step2
+n = int(input())
+for _ in range(n):
+    line = input()
+    print(substitute_symbols(substitute_symbols(line)))
