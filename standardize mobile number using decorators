@@ -1,0 +1,11 @@
+import functools
+def wrapper(f):
+    @functools.wraps(f)
+    def fun(l):
+        standardized = []
+        for n in l:
+            formatted = "+91 " + n[-10:-5] + " " + n[-5:]
+            standardized.append(formatted)
+        return f(sorted(standardized))
+    return fun
+
