@@ -1,0 +1,2 @@
+mport re
+regex_pattern = r"[,.]"
