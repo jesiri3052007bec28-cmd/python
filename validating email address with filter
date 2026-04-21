@@ -1,0 +1,14 @@
+def fun(s):
+    try:
+        username, rest = s.split('@')
+        website, extension = rest.split('.')
+    except ValueError:
+        return False
+    if not username.replace('-', '').replace('_', '').isalnum():
+        return False
+    if not website.isalnum():
+        return False
+    if not extension.isalpha() or len(extension) > 3:
+        return False
+    return True
+
