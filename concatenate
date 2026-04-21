@@ -1,0 +1,44 @@
+import numpy as np
+import sys
+
+def solve():
+    
+    input_data = sys.stdin.read().split()
+    
+    
+    n = int(input_data[0])
+    m = int(input_data[1])
+    p = int(input_data[2])
+    
+    
+    idx = 3
+    
+    
+    array_1 = []
+    for _ in range(n):
+        row = [int(x) for x in input_data[idx:idx+p]]
+        array_1.append(row)
+        idx += p
+        
+    
+    array_2 = []
+    for _ in range(m):
+        row = [int(x) for x in input_data[idx:idx+p]]
+        array_2.append(row)
+        idx += p
+        
+    
+    np_array1 = np.array(array_1)
+    np_array2 = np.array(array_2)
+    
+    
+    result = np.concatenate((np_array1, np_array2), axis=0)
+    
+    print(result)
+
+if __name__ == '__main__':
+    solve()
+
+
+
+
