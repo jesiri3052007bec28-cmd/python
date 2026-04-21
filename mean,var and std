@@ -1,0 +1,12 @@
+import numpy
+import sys
+lines = sys.stdin.readlines()
+n, m = map(int, lines[0].split())
+matrix = []
+for i in range(1, n + 1):
+    matrix.append(list(map(int, lines[i].split())))
+my_array = numpy.array(matrix)
+print(numpy.mean(my_array, axis=1))
+print(numpy.var(my_array, axis=0))
+print(round(numpy.std(my_array), 11))
+
