@@ -1,0 +1,11 @@
+from itertools import product
+k, m = map(int, input().split())
+lists = []
+for _ in range(k):
+    lists.append(list(map(int, input().split()[1:])))
+results = []
+for combination in product(*lists):
+    total_sum = sum(x**2 for x in combination)
+    results.append(total_sum % m)
+
+print(max(results))
