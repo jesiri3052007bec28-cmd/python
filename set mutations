@@ -1,0 +1,16 @@
+n = int(input())
+s = set(map(int, input().split()))
+num_operations = int(input())
+
+for _ in range(num_operations):
+    command, length = input().split()
+    new_set = set(map(int, input().split()))
+    if command == "intersection_update":
+        s.intersection_update(new_set)
+    elif command == "update":
+        s.update(new_set)
+    elif command == "symmetric_difference_update":
+        s.symmetric_difference_update(new_set)
+    elif command == "difference_update":
+        s.difference_update(new_set)
+print(sum(s))
