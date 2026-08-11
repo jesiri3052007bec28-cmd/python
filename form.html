@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            background-color: #ffa500;
+            font-family: sans-serif;
+            padding: 20px;
+        }
+        h2 {
+            margin-bottom: 5px;
+        }
+        p {
+            margin-top: 0;
+            margin-bottom: 25px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .form-group-gender {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            width: 120px;
+            display: inline-block;
+        }
+        input[type="text"], input[type="email"], input[type="date"], input[type="password"], select {
+            padding: 4px;
+            width: 220px;
+            border: 1px solid #ccc;
+        }
+        .radio-container {
+            margin-left: 120px;
+            margin-top: -20px;
+        }
+        .radio-option {
+            margin-bottom: 5px;
+        }
+        .radio-option input {
+            margin-right: 8px;
+        }
+        button {
+            padding: 4px 12px;
+            background-color: #f0f0f0;
+            border: 1px solid #a0a0a0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Registration Form</h2>
+    <p>Fill in this form to register</p>
+
+    <form>
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Enter your first name">
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Enter your last name">
+        </div>
+
+        <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" placeholder="Enter your e-mail">
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date">
+        </div>
+
+        <div class="form-group">
+            <label>Set Username</label>
+            <input type="text" placeholder="Set Username">
+        </div>
+
+        <div class="form-group">
+            <label>Set Password</label>
+            <input type="password" placeholder="Set password">
+        </div>
+
+        <div class="form-group-gender">
+            <label>Gender</label>
+            <div class="radio-container">
+                <div class="radio-option">
+                    <input type="radio" name="gender" value="male">Male
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="gender" value="female">Female
+                </div>
+                <div class="radio-option">
+                    <input type="radio" name="gender" value="others">Others
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Course :</label>
+            <select>
+                <option value="">Course</option>
+            </select>
+        </div>
+
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+</html>
